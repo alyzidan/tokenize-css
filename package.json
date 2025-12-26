@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "CLI tool to convert Design Tokens (Token Studio) to CSS variables",
   "type": "module",
-  "author": "aly zidan",
   "bin": {
     "tokenize-css": "./bin/cli.js"
   },
@@ -21,5 +20,10 @@
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "style-dictionary": "^4.3.0",
+    "commander": "^12.1.0",
+    "chalk": "^5.3.0"
   }
 }
