@@ -1,0 +1,34 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --colors-primary-50: #eff6ff;
+  --colors-primary-100: #dbeafe;
+  --colors-primary-500: #3b82f6;
+  --colors-primary-700: #1d4ed8;
+  --colors-primary-900: #1e3a8a;
+  --colors-neutral-50: #f9fafb;
+  --colors-neutral-100: #f3f4f6;
+  --colors-neutral-500: #6b7280;
+  --colors-neutral-700: #374151;
+  --colors-neutral-900: #111827;
+  --colors-semantic-success: #10b981;
+  --colors-semantic-warning: #f59e0b;
+  --colors-semantic-error: #ef4444;
+  --colors-semantic-info: #3b82f6;
+  --colors-dark-primary-50: #1e3a8a;
+  --colors-dark-primary-100: #1e40af;
+  --colors-dark-primary-500: #60a5fa;
+  --colors-dark-primary-700: #bfdbfe;
+  --colors-dark-primary-900: #eff6ff;
+  --colors-dark-neutral-50: #111827;
+  --colors-dark-neutral-100: #1f2937;
+  --colors-dark-neutral-500: #9ca3af;
+  --colors-dark-neutral-700: #e5e7eb;
+  --colors-dark-neutral-900: #f9fafb;
+  --colors-dark-semantic-success: #34d399;
+  --colors-dark-semantic-warning: #fbbf24;
+  --colors-dark-semantic-error: #f87171;
+  --colors-dark-semantic-info: #60a5fa;
+}

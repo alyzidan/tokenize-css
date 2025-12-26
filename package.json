@@ -4,7 +4,7 @@
   "description": "CLI tool to convert Design Tokens (Token Studio) to CSS variables",
   "type": "module",
   "bin": {
-    "tokenize-css": "./bin/cli.js"
+    "tokenize": "./bin/cli.js"
   },
   "main": "./src/index.js",
   "scripts": {

@@ -32,11 +32,10 @@ async function build(input, output, source = 'token-studio') {
 }
 
 program
-  .name('tokenize-css')
+  .name('tokenize')
   .description('Convert Design Tokens to CSS variables')
   .version('0.1.0');
 
-// Main command (shorthand)
 program
   .argument('<input>', 'Input tokens file')
   .argument('<output>', 'Output directory')
