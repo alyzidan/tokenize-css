@@ -3,38 +3,48 @@
 import { program } from 'commander';
 import StyleDictionary from 'style-dictionary';
 import chalk from 'chalk';
+import { resolve } from 'path';
 import { createTokenStudioConfig } from '../src/config/token-studio.js';
+
+async function build(input, output, source = 'token-studio') {
+  console.log(chalk.blue.bold('\n🎨 tokenize-css\n'));
+  console.log(chalk.gray(`Source: ${source}`));
+  console.log(chalk.gray(`Input: ${input}`));
+  console.log(chalk.gray(`Output: ${output}\n`));
+
+  let config;
+
+  if (source === 'token-studio') {
+    config = createTokenStudioConfig(input, output);
+  } else {
+    console.error(chalk.red(`❌ Source "${source}" not supported yet`));
+    process.exit(1);
+  }
+
+  try {
+    const sd = new StyleDictionary(config);
+    await sd.buildAllPlatforms();
+    console.log(chalk.green('✅ Done!\n'));
+  } catch (error) {
+    console.error(chalk.red(`❌ Error: ${error.message}`));
+    process.exit(1);
+  }
+}
 
 program
   .name('tokenize-css')
   .description('Convert Design Tokens to CSS variables')
-  .version('0.1.0')
-  .requiredOption('-i, --input <path>', 'Input tokens file')
-  .requiredOption('-o, --output <path>', 'Output directory')
+  .version('0.1.0');
+
+// Main command (shorthand)
+program
+  .argument('<input>', 'Input tokens file')
+  .argument('<output>', 'Output directory')
   .option('-s, --source <type>', 'Source type (token-studio, figma-variables)', 'token-studio')
-  .action(async (options) => {
-    console.log(chalk.blue.bold('\n🎨 tokenize-css\n'));
-    console.log(chalk.gray(`Source: ${options.source}`));
-    console.log(chalk.gray(`Input: ${options.input}`));
-    console.log(chalk.gray(`Output: ${options.output}\n`));
-
-    let config;
-
-    if (options.source === 'token-studio') {
-      config = createTokenStudioConfig(options.input, options.output);
-    } else {
-      console.error(chalk.red(`❌ Source "${options.source}" not supported yet`));
-      process.exit(1);
-    }
-
-    try {
-      const sd = new StyleDictionary(config);
-      await sd.buildAllPlatforms();
-      console.log(chalk.green('✅ Done!\n'));
-    } catch (error) {
-      console.error(chalk.red(`❌ Error: ${error.message}`));
-      process.exit(1);
-    }
+  .action(async (input, output, options) => {
+    const inputPath = resolve(process.cwd(), input);
+    const outputPath = resolve(process.cwd(), output);
+    await build(inputPath, outputPath, options.source);
   });
 
 program.parse();
