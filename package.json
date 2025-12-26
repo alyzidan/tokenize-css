@@ -7,6 +7,10 @@
     "tokenize": "./bin/cli.js"
   },
   "main": "./src/index.js",
+  "files": [
+    "bin",
+    "src"
+  ],
   "scripts": {
     "start": "node bin/cli.js"
   },
@@ -14,10 +18,16 @@
     "design-tokens",
     "css-variables",
     "token-studio",
+    "figma",
     "cli",
-    "figma"
+    "style-dictionary"
   ],
+  "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "engines": {
     "node": ">=18.0.0"
   },
