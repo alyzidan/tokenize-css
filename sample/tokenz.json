@@ -1,0 +1,36 @@
+{
+  "color": {
+    "brand": {
+      "primary": {
+        "value": "#1062FE",
+        "type": "color"
+      },
+      "secondary": {
+        "value": "#6D7075",
+        "type": "color"
+      }
+    },
+    "neutral": {
+      "white": {
+        "value": "#ffffff",
+        "type": "color"
+      }
+    }
+  },
+  "spacing": {
+    "small": {
+      "value": "8px",
+      "type": "spacing"
+    },
+    "medium": {
+      "value": "16px",
+      "type": "spacing"
+    }
+  },
+  "borderRadii": {
+    "button": {
+      "value": "4px",
+      "type": "borderRadius"
+    }
+  }
+}
