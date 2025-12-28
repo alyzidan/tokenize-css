@@ -3,16 +3,19 @@
 CLI tool to convert Design Tokens (Token Studio) to CSS variables.
 
 ## Installation
+
 ```bash
 npm install -g tokenize-css
 ```
 
 ## Usage
+
 ```bash
 tokenize <input> <output> [options]
 ```
 
 ### Examples
+
 ```bash
 # Basic usage
 tokenize tokens.json dist
@@ -29,12 +32,12 @@ tokenize tokens.json dist --watch
 
 ### Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
+| Option                | Description                                 | Default      |
+| --------------------- | ------------------------------------------- | ------------ |
 | `-s, --source <type>` | Source type (token-studio, figma-variables) | token-studio |
-| `-w, --watch` | Watch for changes and rebuild automatically | false |
-| `-V, --version` | Output version | |
-| `-h, --help` | Display help | |
+| `-w, --watch`         | Watch for changes and rebuild automatically | false        |
+| `-V, --version`       | Output version                              |              |
+| `-h, --help`          | Display help                                |              |
 
 ## Supported Sources
 
