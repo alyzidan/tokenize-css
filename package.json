@@ -1,6 +1,6 @@
 {
   "name": "tokenize-css",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "CLI tool to convert Design Tokens (Token Studio, Figma Variables) to CSS variables using Style Dictionary",
   "type": "module",
   "bin": {
